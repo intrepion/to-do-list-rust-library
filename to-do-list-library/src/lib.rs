@@ -14,6 +14,16 @@ mod tests {
 
                 assert_eq!(actual, expected);
             }
+
+            #[test]
+            fn create_new_to_do_item_not_done() {
+                let to_do_item = ToDoItem::default();
+
+                let expected = false;
+                let actual = to_do_item.get_done();
+
+                assert_eq!(actual, expected);
+            }
         }
 
         mod new_should {
