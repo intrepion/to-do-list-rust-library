@@ -60,4 +60,6 @@ impl ToDoItem {
             title: title.to_owned(),
         }
     }
+
+    pub fn set_title(&self, _new_title: &str) {}
 }
