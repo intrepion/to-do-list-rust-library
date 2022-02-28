@@ -60,7 +60,7 @@ mod tests {
 
             #[test]
             fn update_done() {
-                let to_do_item = ToDoItem::new("Make a code library.");
+                let mut to_do_item = ToDoItem::new("Make a code library.");
                 to_do_item.set_done(true);
 
                 let expected = true;
@@ -73,6 +73,7 @@ mod tests {
 }
 
 pub struct ToDoItem {
+    done: bool,
     title: String,
 }
 
@@ -82,7 +83,7 @@ impl ToDoItem {
     }
 
     pub fn get_done(&self) -> bool {
-        true
+        self.done
     }
 
     pub fn get_title(&self) -> String {
@@ -91,11 +92,14 @@ impl ToDoItem {
 
     pub fn new(title: &str) -> ToDoItem {
         ToDoItem {
+            done: false,
             title: title.to_owned(),
         }
     }
 
-    pub fn set_done(&self, _new_done: bool) {}
+    pub fn set_done(&mut self, new_done: bool) {
+        self.done = new_done;
+    }
 
     pub fn set_title(&mut self, new_title: &str) {
         self.title = new_title.to_owned();
