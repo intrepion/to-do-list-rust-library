@@ -78,8 +78,10 @@ mod tests {
                 let to_do_item = ToDoItem::default();
                 to_do_item.set_hidden(true);
 
-                let _expected = true;
-                let _actual = to_do_item.get_hidden();
+                let expected = true;
+                let actual = to_do_item.get_hidden();
+
+                assert_eq!(actual, expected);
             }
         }
     }
