@@ -1,8 +1,9 @@
 #[cfg(test)]
 mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+    mod to_do_item {
+        #[test]
+        fn default_should_create_new_to_do_item() {
+            let to_do_item = ToDoItem::default();
+        }
     }
 }
