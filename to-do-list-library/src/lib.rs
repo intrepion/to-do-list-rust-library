@@ -60,13 +60,20 @@ mod tests {
 
             #[test]
             fn update_done() {
-                let mut to_do_item = ToDoItem::new("Make a code library.");
+                let mut to_do_item = ToDoItem::default();
                 to_do_item.set_done(true);
 
                 let expected = true;
                 let actual = to_do_item.get_done();
 
                 assert_eq!(actual, expected);
+            }
+        }
+
+        mod set_hidden_should {
+            #[test]
+            fn update_hidden() {
+                let to_do_item = ToDoItem::default();
             }
         }
     }
