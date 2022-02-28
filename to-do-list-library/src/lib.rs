@@ -44,6 +44,14 @@ mod tests {
                 assert_eq!(actual, expected);
             }
         }
+
+        mod set_done_should {
+            #[test]
+            fn update_done() {
+                let to_do_item = ToDoItem::new("Make a code library.");
+                to_do_item.set_done(true);
+            }
+        }
     }
 }
 
