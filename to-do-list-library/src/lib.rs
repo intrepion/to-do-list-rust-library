@@ -15,9 +15,11 @@ mod tests {
         }
 
         mod new_should {
+            use super::super::super::ToDoItem;
+
             #[test]
             fn create_new_to_do_item_with_custom_title() {
-                let to_do_item = ToDoItem::new("Make a code library.");
+                let _to_do_item = ToDoItem::new("Make a code library.");
             }
         }
     }
@@ -32,5 +34,9 @@ impl ToDoItem {
 
     pub fn get_title(&self) -> String {
         "Edit this to do item.".to_owned()
+    }
+
+    pub fn new(_title: &str) -> ToDoItem {
+        ToDoItem {}
     }
 }
