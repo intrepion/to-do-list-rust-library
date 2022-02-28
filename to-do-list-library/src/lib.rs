@@ -78,8 +78,8 @@ mod tests {
                 let to_do_item = ToDoItem::default();
                 to_do_item.set_hidden(true);
 
-                let expected = true;
-                let actual = to_do_item.get_hidden();
+                let _expected = true;
+                let _actual = to_do_item.get_hidden();
             }
         }
     }
@@ -98,6 +98,8 @@ impl ToDoItem {
     pub fn get_done(&self) -> bool {
         self.done
     }
+
+    pub fn get_hidden(&self) {}
 
     pub fn get_title(&self) -> String {
         self.title.clone()
