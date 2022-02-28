@@ -46,10 +46,11 @@ mod tests {
         }
 
         mod set_done_should {
+            use super::super::super::ToDoItem;
+
             #[test]
             fn update_done() {
-                let to_do_item = ToDoItem::new("Make a code library.");
-                to_do_item.set_done(true);
+                let _to_do_item = ToDoItem::new("Make a code library.");
             }
         }
     }
