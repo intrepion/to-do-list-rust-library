@@ -85,7 +85,7 @@ mod tests {
 
             #[test]
             fn update_hidden() {
-                let to_do_item = ToDoItem::default();
+                let mut to_do_item = ToDoItem::default();
                 to_do_item.set_hidden(true);
 
                 let expected = true;
@@ -99,6 +99,7 @@ mod tests {
 
 pub struct ToDoItem {
     done: bool,
+    hidden: bool,
     title: String,
 }
 
@@ -112,7 +113,7 @@ impl ToDoItem {
     }
 
     pub fn get_hidden(&self) -> bool {
-        true
+        self.hidden
     }
 
     pub fn get_title(&self) -> String {
@@ -122,6 +123,7 @@ impl ToDoItem {
     pub fn new(title: &str) -> ToDoItem {
         ToDoItem {
             done: false,
+            hidden: false,
             title: title.to_owned(),
         }
     }
@@ -130,7 +132,9 @@ impl ToDoItem {
         self.done = new_done;
     }
 
-    pub fn set_hidden(&self, _new_hidden: bool) {}
+    pub fn set_hidden(&mut self, new_hidden: bool) {
+        self.hidden = new_hidden;
+    }
 
     pub fn set_title(&mut self, new_title: &str) {
         self.title = new_title.to_owned();
