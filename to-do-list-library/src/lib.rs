@@ -19,7 +19,12 @@ mod tests {
 
             #[test]
             fn create_new_to_do_item_with_custom_title() {
-                let _to_do_item = ToDoItem::new("Make a code library.");
+                let to_do_item = ToDoItem::new("Make a code library.");
+
+                let expected = "Make a code library.".to_owned();
+                let actual = to_do_item.get_title();
+
+                assert_eq!(actual, expected);
             }
         }
     }
