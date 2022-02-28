@@ -75,7 +75,8 @@ mod tests {
 
             #[test]
             fn update_hidden() {
-                let _to_do_item = ToDoItem::default();
+                let to_do_item = ToDoItem::default();
+                to_do_item.set_hidden(true);
             }
         }
     }
