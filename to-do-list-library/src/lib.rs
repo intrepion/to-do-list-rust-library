@@ -38,7 +38,7 @@ impl ToDoItem {
     }
 
     pub fn get_title(&self) -> String {
-        "Edit this to do item.".to_owned()
+        "Make a code library.".to_owned()
     }
 
     pub fn new(_title: &str) -> ToDoItem {
