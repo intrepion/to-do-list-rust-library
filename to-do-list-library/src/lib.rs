@@ -35,7 +35,7 @@ mod tests {
 
             #[test]
             fn update_title() {
-                let to_do_item = ToDoItem::new("Make a code libary.");
+                let mut to_do_item = ToDoItem::new("Make a code libary.");
                 to_do_item.set_title("Make a code library.");
 
                 let expected = "Make a code library.".to_owned();
@@ -66,5 +66,7 @@ impl ToDoItem {
         }
     }
 
-    pub fn set_title(&self, _new_title: &str) {}
+    pub fn set_title(&mut self, new_title: &str) {
+        self.title = new_title.to_owned();
+    }
 }
