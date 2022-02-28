@@ -71,9 +71,11 @@ mod tests {
         }
 
         mod set_hidden_should {
+            use super::super::super::ToDoItem;
+
             #[test]
             fn update_hidden() {
-                let to_do_item = ToDoItem::default();
+                let _to_do_item = ToDoItem::default();
             }
         }
     }
