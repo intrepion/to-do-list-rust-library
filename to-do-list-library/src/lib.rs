@@ -101,7 +101,9 @@ impl ToDoItem {
         self.done
     }
 
-    pub fn get_hidden(&self) {}
+    pub fn get_hidden(&self) -> bool {
+        true
+    }
 
     pub fn get_title(&self) -> String {
         self.title.clone()
