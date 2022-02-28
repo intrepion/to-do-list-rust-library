@@ -53,8 +53,8 @@ mod tests {
                 let to_do_item = ToDoItem::new("Make a code library.");
                 to_do_item.set_done(true);
 
-                let expected = true;
-                let actual = to_do_item.get_done();
+                let _expected = true;
+                let _actual = to_do_item.get_done();
             }
         }
     }
@@ -68,6 +68,8 @@ impl ToDoItem {
     pub fn default() -> ToDoItem {
         ToDoItem::new("Edit this to-do item.")
     }
+
+    pub fn get_done(&self) {}
 
     pub fn get_title(&self) -> String {
         self.title.clone()
