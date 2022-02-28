@@ -53,8 +53,10 @@ mod tests {
                 let to_do_item = ToDoItem::new("Make a code library.");
                 to_do_item.set_done(true);
 
-                let _expected = true;
-                let _actual = to_do_item.get_done();
+                let expected = true;
+                let actual = to_do_item.get_done();
+
+                assert_eq!(actual, expected);
             }
         }
     }
