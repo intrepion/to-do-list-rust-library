@@ -52,6 +52,9 @@ mod tests {
             fn update_done() {
                 let to_do_item = ToDoItem::new("Make a code library.");
                 to_do_item.set_done(true);
+
+                let expected = true;
+                let actual = to_do_item.get_done();
             }
         }
     }
