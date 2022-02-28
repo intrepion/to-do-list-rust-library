@@ -29,6 +29,16 @@ mod tests {
                 assert_eq!(actual, expected);
             }
         }
+
+        mod set_title_should {
+            use super::super::super::ToDoItem;
+
+            #[test]
+            fn update_title() {
+                let to_do_item = ToDoItem::new("Make a code libary.");
+                to_do_item.set_title("Make a code library.");
+            }
+        }
     }
 }
 
