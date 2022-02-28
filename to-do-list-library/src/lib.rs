@@ -37,6 +37,11 @@ mod tests {
             fn update_title() {
                 let to_do_item = ToDoItem::new("Make a code libary.");
                 to_do_item.set_title("Make a code library.");
+
+                let expected = "Make a code library.".to_owned();
+                let actual = to_do_item.get_title();
+
+                assert_eq!(actual, expected);
             }
         }
     }
