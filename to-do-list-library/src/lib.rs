@@ -111,6 +111,8 @@ impl ToDoItem {
         self.done = new_done;
     }
 
+    pub fn set_hidden(&self, _new_hidden: bool) {}
+
     pub fn set_title(&mut self, new_title: &str) {
         self.title = new_title.to_owned();
     }
