@@ -76,6 +76,8 @@ impl ToDoItem {
         }
     }
 
+    pub fn set_done(&self, _new_done: bool) {}
+
     pub fn set_title(&mut self, new_title: &str) {
         self.title = new_title.to_owned();
     }
