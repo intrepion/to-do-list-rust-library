@@ -50,7 +50,8 @@ mod tests {
 
             #[test]
             fn update_done() {
-                let _to_do_item = ToDoItem::new("Make a code library.");
+                let to_do_item = ToDoItem::new("Make a code library.");
+                to_do_item.set_done(true);
             }
         }
     }
