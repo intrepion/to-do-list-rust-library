@@ -9,7 +9,7 @@ mod tests {
             fn create_new_to_do_item() {
                 let to_do_item = ToDoItem::default();
 
-                let expected = "Edit this to do item.".to_owned();
+                let expected = "Edit this to-do item.".to_owned();
                 let actual = to_do_item.get_title();
 
                 assert_eq!(actual, expected);
@@ -32,18 +32,22 @@ mod tests {
     }
 }
 
-pub struct ToDoItem {}
+pub struct ToDoItem {
+    title: String,
+}
 
 impl ToDoItem {
     pub fn default() -> ToDoItem {
-        ToDoItem {}
+        ToDoItem::new("Edit this to-do item.")
     }
 
     pub fn get_title(&self) -> String {
-        "Make a code library.".to_owned()
+        self.title.clone()
     }
 
-    pub fn new(_title: &str) -> ToDoItem {
-        ToDoItem {}
+    pub fn new(title: &str) -> ToDoItem {
+        ToDoItem {
+            title: title.to_owned(),
+        }
     }
 }
