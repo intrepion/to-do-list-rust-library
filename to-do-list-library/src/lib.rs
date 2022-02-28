@@ -71,7 +71,9 @@ impl ToDoItem {
         ToDoItem::new("Edit this to-do item.")
     }
 
-    pub fn get_done(&self) {}
+    pub fn get_done(&self) -> bool {
+        true
+    }
 
     pub fn get_title(&self) -> String {
         self.title.clone()
